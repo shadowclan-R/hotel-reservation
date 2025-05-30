@@ -1,116 +1,821 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>حجز فندق فخم</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>روقا للحجوزات الفندقية - فنادق إسطنبول الفاخرة</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container">
-      <a href="#" class="logo">اسم الفندق</a>
-      <nav class="main-nav">
-        <ul>
-          <li><a href="#hero">الرئيسية</a></li>
-          <li><a href="#rooms">الغرف</a></li>
-          <li><a href="#facilities">المرافق</a></li>
-          <li><a href="#testimonials">تقييمات</a></li>
-          <li><a href="#contact">اتصل بنا</a></li>
-        </ul>
-      </nav>
-      <a href="#reservation" class="btn btn-primary">احجز الآن</a>
-    </div>
-  </header>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">روقا للحجوزات الفندقية</div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#hotels">الفنادق</a></li>
+                    <li><a href="#services">الخدمات</a></li>
+                    <li><a href="#reservation">الحجز</a></li>
+                    <li><a href="#contact">اتصل بنا</a></li>
+                </ul>
+            </nav>
+            <a href="#reservation" class="btn">احجز الآن</a>
+        </div>
+    </header>
 
-  <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content container">
-      <h1>اكتشف الرفاهية في قلب المدينة</h1>
-      <p>تجربة إقامة لا تُنسى مع أفضل الخدمات والأجواء الفاخرة.</p>
-      <a href="#reservation" class="btn btn-secondary">ابدأ الحجز الآن</a>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">أفضل الفنادق في تركيا</div>
+                <h1 class="hero-title">اكتشف أفخم فنادق إسطنبول</h1>
+                <p class="hero-description">احجز إقامتك في أرقى الفنادق الخمس نجوم في إسطنبول مع خدمة استثنائية وإطلالات خلابة على البوسفور</p>
+                <div class="hero-buttons">
+                    <a href="#reservation" class="btn hero-btn-primary">احجز الآن</a>
+                    <a href="#hotels" class="btn hero-btn-secondary">استكشف الفنادق</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">فندق فاخر</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50k+</span>
+                        <span class="stat-label">ضيف سعيد</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">خدمة العملاء</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="فندق فاخر في إسطنبول" class="hero-img">
+                <div class="hero-image-overlay">
+                    <div class="floating-card">
+                        <i class="fas fa-star"></i>
+                        <span>تقييم 4.9/5</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- About Section -->
-  <section id="about" class="about container">
-    <h2>عن الفندق</h2>
-    <p>فندق فخم يقع في موقع متميز وسط المدينة، يقدم خدمات 5 نجوم تشمل واي فاي مجاني، إفطار يومي، ومسبح ساحر.</p>
-    <div class="features">
-      <div class="feature-item">Wi-Fi سريع</div>
-      <div class="feature-item">إفطار غني</div>
-      <div class="feature-item">مسبح داخلي</div>
-      <div class="feature-item">سبا واستجمام</div>
-    </div>
-  </section>
+    <!-- Hotels Section -->
+    <section id="hotels" class="section">
+        <h2 class="section-title">فنادقنا المميزة</h2>
+        <div class="hotels-grid">
+            <!-- فندق فور سيزونز البوسفور -->
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="فندق فور سيزونز البوسفور">
+                    <div class="hotel-rating">⭐ 5.0</div>
+                    <div class="hotel-badge luxury">فاخر</div>
+                </div>
+                <div class="hotel-info">
+                    <h3 class="hotel-name">فندق فور سيزونز البوسفور</h3>
+                    <div class="hotel-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>بشيكتاش، إسطنبول</span>
+                    </div>
+                    <div class="hotel-features">
+                        <span class="feature-tag">سبا فاخر</span>
+                        <span class="feature-tag">إطلالة البوسفور</span>
+                        <span class="feature-tag">مطاعم عالمية</span>
+                    </div>
+                    <div class="hotel-price">$450<span class="price-period">/ليلة</span></div>
+                    <div class="hotel-actions">
+                        <a href="https://www.fourseasons.com/bosphorus/" target="_blank" class="btn-secondary">
+                            <i class="fas fa-external-link-alt"></i>
+                            الموقع الرسمي
+                        </a>
+                        <a href="https://maps.google.com/?q=Four+Seasons+Hotel+Istanbul+at+the+Bosphorus" target="_blank" class="btn-secondary">
+                            <i class="fas fa-map-marker-alt"></i>
+                            الموقع
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Room Types Section -->
-  <section id="rooms" class="rooms container">
-    <h2>أنواع الغرف</h2>
-    <div class="room-list">
-      <!-- مثال لغرفة -->
-      <div class="room-item">
-        <img src="assets/images/room1.jpg" alt="غرفة ديلوكس">
-        <h3>غرفة ديلوكس</h3>
-        <p>مساحة واسعة مع إطلالة رائعة على المدينة.</p>
-        <span class="price">$120 / الليلة</span>
-        <a href="#reservation" class="btn btn-secondary">احجز الآن</a>
-      </div>
-      <!-- إضافة غرف أخرى بنفس الشكل -->
-    </div>
-  </section>
+            <!-- فندق ريتز كارلتون إسطنبول -->
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="فندق ريتز كارلتون إسطنبول">
+                    <div class="hotel-rating">⭐ 4.9</div>
+                    <div class="hotel-badge luxury">فاخر</div>
+                </div>
+                <div class="hotel-info">
+                    <h3 class="hotel-name">فندق ريتز كارلتون إسطنبول</h3>
+                    <div class="hotel-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>شيشلي، إسطنبول</span>
+                    </div>
+                    <div class="hotel-features">
+                        <span class="feature-tag">نادي صحي</span>
+                        <span class="feature-tag">قاعات مؤتمرات</span>
+                        <span class="feature-tag">خدمة 24/7</span>
+                    </div>
+                    <div class="hotel-price">$380<span class="price-period">/ليلة</span></div>
+                    <div class="hotel-actions">
+                        <a href="https://www.ritzcarlton.com/istanbul" target="_blank" class="btn-secondary">
+                            <i class="fas fa-external-link-alt"></i>
+                            الموقع الرسمي
+                        </a>
+                        <a href="https://maps.google.com/?q=The+Ritz-Carlton+Istanbul" target="_blank" class="btn-secondary">
+                            <i class="fas fa-map-marker-alt"></i>
+                            الموقع
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Facilities Section -->
-  <section id="facilities" class="facilities container">
-    <h2>المرافق والخدمات</h2>
-    <div class="facilities-list">
-      <!-- مثال لمرفق -->
-      <div class="facility-item">
-        <img src="assets/images/pool.jpg" alt="مسبح">
-        <h4>مسبح داخلي</h4>
-      </div>
-      <!-- إضافة مرافق أخرى -->
-    </div>
-  </section>
+            <!-- فندق شانغريلا البوسفور -->
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="فندق شانغريلا البوسفور">
+                    <div class="hotel-rating">⭐ 4.8</div>
+                    <div class="hotel-badge premium">مميز</div>
+                </div>
+                <div class="hotel-info">
+                    <h3 class="hotel-name">فندق شانغريلا البوسفور</h3>
+                    <div class="hotel-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>بشيكتاش، إسطنبول</span>
+                    </div>
+                    <div class="hotel-features">
+                        <span class="feature-tag">حمام سباحة</span>
+                        <span class="feature-tag">مركز أعمال</span>
+                        <span class="feature-tag">خدمة الكونسيرج</span>
+                    </div>
+                    <div class="hotel-price">$420<span class="price-period">/ليلة</span></div>
+                    <div class="hotel-actions">
+                        <a href="https://www.shangri-la.com/istanbul/shangrila/" target="_blank" class="btn-secondary">
+                            <i class="fas fa-external-link-alt"></i>
+                            الموقع الرسمي
+                        </a>
+                        <a href="https://maps.google.com/?q=Shangri+La+Bosphorus+Istanbul" target="_blank" class="btn-secondary">
+                            <i class="fas fa-map-marker-alt"></i>
+                            الموقع
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="testimonials container">
-    <h2>آراء الزبائن</h2>
-    <div class="testimonial-slider">
-      <!-- بوستات الكاروسيل هنا -->
-    </div>
-  </section>
+            <!-- فندق سويس أوتيل البوسفور -->
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="فندق سويس أوتيل البوسفور">
+                    <div class="hotel-rating">⭐ 4.7</div>
+                    <div class="hotel-badge premium">مميز</div>
+                </div>
+                <div class="hotel-info">
+                    <h3 class="hotel-name">فندق سويس أوتيل البوسفور</h3>
+                    <div class="hotel-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>ماجكا، إسطنبول</span>
+                    </div>
+                    <div class="hotel-features">
+                        <span class="feature-tag">حديقة خاصة</span>
+                        <span class="feature-tag">سبا متكامل</span>
+                        <span class="feature-tag">إطلالة بحرية</span>
+                    </div>
+                    <div class="hotel-price">$320<span class="price-period">/ليلة</span></div>
+                    <div class="hotel-actions">
+                        <a href="https://www.swissotel.com/hotels/istanbul/" target="_blank" class="btn-secondary">
+                            <i class="fas fa-external-link-alt"></i>
+                            الموقع الرسمي
+                        </a>
+                        <a href="https://maps.google.com/?q=Swissotel+The+Bosphorus+Istanbul" target="_blank" class="btn-secondary">
+                            <i class="fas fa-map-marker-alt"></i>
+                            الموقع
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Reservation Form Section -->
-  <section id="reservation" class="reservation container">
-    <h2>نموذج الحجز</h2>
-    <form action="#" method="POST" class="reservation-form">
-      <input type="text" name="name" placeholder="الاسم الكامل" required>
-      <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-      <input type="date" name="checkin" placeholder="تاريخ الوصول" required>
-      <input type="date" name="checkout" placeholder="تاريخ المغادرة" required>
-      <select name="guests" required>
-        <option value="1">شخص واحد</option>
-        <option value="2">شخصان</option>
-        <option value="3">3 أشخاص</option>
-        <option value="4">4 أشخاص</option>
-      </select>
-      <button type="submit" class="btn btn-primary">إرسال</button>
-    </form>
-  </section>
+            <!-- فندق حياة ريجنسي إسطنبول -->
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="فندق حياة ريجنسي إسطنبول">
+                    <div class="hotel-rating">⭐ 4.6</div>
+                    <div class="hotel-badge standard">قياسي</div>
+                </div>
+                <div class="hotel-info">
+                    <h3 class="hotel-name">فندق حياة ريجنسي إسطنبول</h3>
+                    <div class="hotel-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>تقسيم، إسطنبول</span>
+                    </div>
+                    <div class="hotel-features">
+                        <span class="feature-tag">موقع مركزي</span>
+                        <span class="feature-tag">مركز لياقة</span>
+                        <span class="feature-tag">مطعم تركي</span>
+                    </div>
+                    <div class="hotel-price">$280<span class="price-period">/ليلة</span></div>
+                    <div class="hotel-actions">
+                        <a href="https://www.hyatt.com/en-US/hotel/turkey/hyatt-regency-istanbul/istru" target="_blank" class="btn-secondary">
+                            <i class="fas fa-external-link-alt"></i>
+                            الموقع الرسمي
+                        </a>
+                        <a href="https://maps.google.com/?q=Hyatt+Regency+Istanbul" target="_blank" class="btn-secondary">
+                            <i class="fas fa-map-marker-alt"></i>
+                            الموقع
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-  <!-- Footer -->
-  <footer class="site-footer container" id="contact">
-    <div class="footer-info">
-      <p>© 2025 اسم الفندق. جميع الحقوق محفوظة.</p>
-      <div class="social-links">
-        <!-- أيقونات التواصل الاجتماعي -->
-      </div>
-    </div>
-  </footer>
+            <!-- فندق كونراد إسطنبول -->
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="فندق كونراد إسطنبول">
+                    <div class="hotel-rating">⭐ 4.8</div>
+                    <div class="hotel-badge luxury">فاخر</div>
+                </div>
+                <div class="hotel-info">
+                    <h3 class="hotel-name">فندق كونراد إسطنبول</h3>
+                    <div class="hotel-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>بشيكتاش، إسطنبول</span>
+                    </div>
+                    <div class="hotel-features">
+                        <span class="feature-tag">تراس سطح</span>
+                        <span class="feature-tag">خدمة توصيل</span>
+                        <span class="feature-tag">قاعة احتفالات</span>
+                    </div>
+                    <div class="hotel-price">$390<span class="price-period">/ليلة</span></div>
+                    <div class="hotel-actions">
+                        <a href="https://www.hilton.com/en/hotels/istboci-conrad-istanbul-bosphorus/" target="_blank" class="btn-secondary">
+                            <i class="fas fa-external-link-alt"></i>
+                            الموقع الرسمي
+                        </a>
+                        <a href="https://maps.google.com/?q=Conrad+Istanbul+Bosphorus" target="_blank" class="btn-secondary">
+                            <i class="fas fa-map-marker-alt"></i>
+                            الموقع
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-  <script src="assets/js/script.js" defer></script>
+            <!-- فندق راديسون بلو إسطنبول -->
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="فندق راديسون بلو إسطنبول">
+                    <div class="hotel-rating">⭐ 4.5</div>
+                    <div class="hotel-badge standard">قياسي</div>
+                </div>
+                <div class="hotel-info">
+                    <h3 class="hotel-name">فندق راديسون بلو إسطنبول</h3>
+                    <div class="hotel-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>سيشلي، إسطنبول</span>
+                    </div>
+                    <div class="hotel-features">
+                        <span class="feature-tag">واي فاي مجاني</span>
+                        <span class="feature-tag">مطعم دولي</span>
+                        <span class="feature-tag">خدمة غرف</span>
+                    </div>
+                    <div class="hotel-price">$240<span class="price-period">/ليلة</span></div>
+                    <div class="hotel-actions">
+                        <a href="https://www.radissonhotels.com/en-us/hotels/radisson-blu-istanbul" target="_blank" class="btn-secondary">
+                            <i class="fas fa-external-link-alt"></i>
+                            الموقع الرسمي
+                        </a>
+                        <a href="https://maps.google.com/?q=Radisson+Blu+Hotel+Istanbul" target="_blank" class="btn-secondary">
+                            <i class="fas fa-map-marker-alt"></i>
+                            الموقع
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- فندق إنتركونتيننتال إسطنبول -->
+            <div class="hotel-card">
+                <div class="hotel-image">
+                    <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="فندق إنتركونتيننتال إسطنبول">
+                    <div class="hotel-rating">⭐ 4.7</div>
+                    <div class="hotel-badge premium">مميز</div>
+                </div>
+                <div class="hotel-info">
+                    <h3 class="hotel-name">فندق إنتركونتيننتال إسطنبول</h3>
+                    <div class="hotel-location">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>تقسيم، إسطنبول</span>
+                    </div>
+                    <div class="hotel-features">
+                        <span class="feature-tag">ناد ليلي</span>
+                        <span class="feature-tag">مسبح داخلي</span>
+                        <span class="feature-tag">خدمة مميزة</span>
+                    </div>
+                    <div class="hotel-price">$350<span class="price-period">/ليلة</span></div>
+                    <div class="hotel-actions">
+                        <a href="https://www.ihg.com/intercontinental/hotels/us/en/istanbul/istba/hoteldetail" target="_blank" class="btn-secondary">
+                            <i class="fas fa-external-link-alt"></i>
+                            الموقع الرسمي
+                        </a>
+                        <a href="https://maps.google.com/?q=InterContinental+Istanbul" target="_blank" class="btn-secondary">
+                            <i class="fas fa-map-marker-alt"></i>
+                            الموقع
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="map-container">
+            <h2 class="section-title">موقع فنادقنا في إسطنبول</h2>
+            <p class="map-description">اكتشف مواقع فنادقنا المميزة في أجمل أحياء إسطنبول</p>
+            
+            <!-- خريطة رئيسية تظهر جميع الفنادق -->
+            <div class="main-map">
+                <iframe 
+                    class="map-frame"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24141.01!2d29.02!3d41.03!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab7650656bd63%3A0x8ca058b28c20b6c3!2sFour%20Seasons%20Hotel%20Istanbul%20at%20the%20Bosphorus!5e0!3m2!1sar!2s!4v1635789012345!5m2!1sar!2s"
+                    allowfullscreen="" 
+                    loading="lazy"
+                    title="مواقع فنادقنا في إسطنبول">
+                </iframe>
+            </div>
+
+            <!-- قائمة سريعة للمواقع -->
+            <div class="hotel-locations-grid">
+                <div class="location-card">
+                    <div class="location-header">
+                        <h3>فور سيزونز البوسفور</h3>
+                        <span class="location-badge luxury">فاخر</span>
+                    </div>
+                    <p class="location-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Çırağan Cd. No:28, 34349 Beşiktaş/İstanbul
+                    </p>
+                    <div class="location-features">
+                        <span class="feature">إطلالة مباشرة على البوسفور</span>
+                        <span class="feature">منطقة بشيكتاش الراقية</span>
+                    </div>
+                    <a href="https://maps.google.com/maps?q=Four+Seasons+Hotel+Istanbul+at+the+Bosphorus&t=m&z=15" 
+                       target="_blank" class="location-btn">
+                        <i class="fas fa-directions"></i>
+                        الاتجاهات
+                    </a>
+                </div>
+
+                <div class="location-card">
+                    <div class="location-header">
+                        <h3>ريتز كارلتون إسطنبول</h3>
+                        <span class="location-badge luxury">فاخر</span>
+                    </div>
+                    <p class="location-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Suzer Plaza, Askerocağı Cd. No:15, 34367 Şişli/İstanbul
+                    </p>
+                    <div class="location-features">
+                        <span class="feature">قلب منطقة شيشلي</span>
+                        <span class="feature">قريب من مراكز التسوق</span>
+                    </div>
+                    <a href="https://maps.google.com/maps?q=The+Ritz-Carlton+Istanbul&t=m&z=15" 
+                       target="_blank" class="location-btn">
+                        <i class="fas fa-directions"></i>
+                        الاتجاهات
+                    </a>
+                </div>
+
+                <div class="location-card">
+                    <div class="location-header">
+                        <h3>شانغريلا البوسفور</h3>
+                        <span class="location-badge premium">مميز</span>
+                    </div>
+                    <p class="location-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Sinanpaşa Mh., Hayrettin İskelesi Sk. No:1, 34353 Beşiktaş/İstanbul
+                    </p>
+                    <div class="location-features">
+                        <span class="feature">إطلالة بانورامية</span>
+                        <span class="feature">منطقة بشيكتاش التاريخية</span>
+                    </div>
+                    <a href="https://maps.google.com/maps?q=Shangri+La+Bosphorus+Istanbul&t=m&z=15" 
+                       target="_blank" class="location-btn">
+                        <i class="fas fa-directions"></i>
+                        الاتجاهات
+                    </a>
+                </div>
+
+                <div class="location-card">
+                    <div class="location-header">
+                        <h3>سويس أوتيل البوسفور</h3>
+                        <span class="location-badge premium">مميز</span>
+                    </div>
+                    <p class="location-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Vişnezade Mh., Acısu Sk. No:19, 34357 Beşiktaş/İstanbul
+                    </p>
+                    <div class="location-features">
+                        <span class="feature">منطقة ماجكا الهادئة</span>
+                        <span class="feature">حدائق خاصة واسعة</span>
+                    </div>
+                    <a href="https://maps.google.com/maps?q=Swissotel+The+Bosphorus+Istanbul&t=m&z=15" 
+                       target="_blank" class="location-btn">
+                        <i class="fas fa-directions"></i>
+                        الاتجاهات
+                    </a>
+                </div>
+
+                <div class="location-card">
+                    <div class="location-header">
+                        <h3>حياة ريجنسي إسطنبول</h3>
+                        <span class="location-badge standard">قياسي</span>
+                    </div>
+                    <p class="location-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Taşkışla Cd. No:1, 34367 Şişli/İstanbul
+                    </p>
+                    <div class="location-features">
+                        <span class="feature">ميدان تقسيم المركزي</span>
+                        <span class="feature">شارع الاستقلال التجاري</span>
+                    </div>
+                    <a href="https://maps.google.com/maps?q=Hyatt+Regency+Istanbul&t=m&z=15" 
+                       target="_blank" class="location-btn">
+                        <i class="fas fa-directions"></i>
+                        الاتجاهات
+                    </a>
+                </div>
+
+                <div class="location-card">
+                    <div class="location-header">
+                        <h3>كونراد إسطنبول</h3>
+                        <span class="location-badge luxury">فاخر</span>
+                    </div>
+                    <p class="location-address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Cihannüma Mh., Saray Cd. No:5, 34353 Beşiktaş/İstanbul
+                    </p>
+                    <div class="location-features">
+                        <span class="feature">إطلالة على البوسفور</span>
+                        <span class="feature">منطقة بشيكتاش الأنيقة</span>
+                    </div>
+                    <a href="https://maps.google.com/maps?q=Conrad+Istanbul+Bosphorus&t=m&z=15" 
+                       target="_blank" class="location-btn">
+                        <i class="fas fa-directions"></i>
+                        الاتجاهات
+                    </a>
+                </div>
+            </div>
+
+            <!-- معلومات إضافية عن المواقع -->
+            <div class="location-info">
+                <div class="info-item">
+                    <i class="fas fa-subway"></i>
+                    <h4>المواصلات العامة</h4>
+                    <p>جميع فنادقنا قريبة من محطات المترو والترام</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-plane"></i>
+                    <h4>المطار</h4>
+                    <p>25-45 دقيقة من مطار إسطنبول الجديد</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-landmark"></i>
+                    <h4>المعالم السياحية</h4>
+                    <p>قريب من أهم المعالم التاريخية والسياحية</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section">
+        <h2 class="section-title">خدماتنا المميزة</h2>
+        <p class="section-subtitle">نقدم لكم أفضل الخدمات لضمان إقامة مثالية ومريحة</p>
+        
+        <div class="services-grid">
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-concierge-bell"></i>
+                </div>
+                <h3>خدمة الكونسيرج</h3>
+                <p>خدمة شخصية متاحة على مدار الساعة لتلبية جميع احتياجاتكم والمساعدة في تنظيم رحلاتكم</p>
+                <div class="service-features">
+                    <span>متاح 24/7</span>
+                    <span>متعدد اللغات</span>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-car"></i>
+                </div>
+                <h3>النقل المجاني</h3>
+                <p>خدمة نقل مجانية من وإلى المطار مع سيارات فاخرة ومريحة لضمان وصولكم بأمان</p>
+                <div class="service-features">
+                    <span>سيارات فاخرة</span>
+                    <span>سائقين محترفين</span>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <h3>السبا والعافية</h3>
+                <p>مراكز سبا عالمية مع علاجات متنوعة للاسترخاء والتجديد مع أحدث التقنيات العلاجية</p>
+                <div class="service-features">
+                    <span>علاجات عالمية</span>
+                    <span>خبراء معتمدين</span>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h3>المطاعم الفاخرة</h3>
+                <p>تجارب طعام استثنائية مع أشهر الطهاة العالميين والمأكولات التركية والعالمية الأصيلة</p>
+                <div class="service-features">
+                    <span>طهاة عالميين</span>
+                    <span>مأكولات متنوعة</span>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-swimming-pool"></i>
+                </div>
+                <h3>حمامات السباحة</h3>
+                <p>حمامات سباحة داخلية وخارجية بإطلالات خلابة مع خدمات متميزة ومرافق حديثة</p>
+                <div class="service-features">
+                    <span>مسابح متعددة</span>
+                    <span>إطلالات مميزة</span>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <h3>مراكز اللياقة</h3>
+                <p>صالات رياضية مجهزة بأحدث الأجهزة مع مدربين شخصيين وبرامج تدريبية متخصصة</p>
+                <div class="service-features">
+                    <span>أجهزة حديثة</span>
+                    <span>مدربين شخصيين</span>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-wifi"></i>
+                </div>
+                <h3>إنترنت مجاني</h3>
+                <p>واي فاي مجاني عالي السرعة في جميع أنحاء الفندق للبقاء على تواصل مع العالم</p>
+                <div class="service-features">
+                    <span>سرعة عالية</span>
+                    <span>تغطية شاملة</span>
+                </div>
+            </div>
+
+            <div class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-baby"></i>
+                </div>
+                <h3>خدمات الأطفال</h3>
+                <p>مرافق وأنشطة خاصة بالأطفال مع مراكز رعاية آمنة ومسلية لقضاء وقت ممتع</p>
+                <div class="service-features">
+                    <span>أنشطة متنوعة</span>
+                    <span>رعاية آمنة</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="section">
+            <h2 class="section-title">معرض الصور</h2>
+            <p class="section-subtitle">استكشف جمال فنادقنا وتجارب الضيوف المميزة</p>
+            
+            <div class="gallery-tabs">
+                <button class="tab-btn active" data-category="all">جميع الصور</button>
+                <button class="tab-btn" data-category="rooms">الغرف</button>
+                <button class="tab-btn" data-category="restaurants">المطاعم</button>
+                <button class="tab-btn" data-category="facilities">المرافق</button>
+                <button class="tab-btn" data-category="views">الإطلالات</button>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Room Images -->
+                <div class="gallery-item" data-category="rooms">
+                    <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="جناح فاخر">
+                    <div class="gallery-overlay">
+                        <h4>جناح فاخر مع إطلالة على البوسفور</h4>
+                        <p>غرفة مُصممة بأناقة مع جميع وسائل الراحة</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="rooms">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="غرفة تنفيذية">
+                    <div class="gallery-overlay">
+                        <h4>غرفة تنفيذية أنيقة</h4>
+                        <p>تصميم عصري مع إطلالة مذهلة على المدينة</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="rooms">
+                    <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="غرفة ديلوكس">
+                    <div class="gallery-overlay">
+                        <h4>غرفة ديلوكس مع شرفة</h4>
+                        <p>راحة وأناقة مع شرفة خاصة</p>
+                    </div>
+                </div>
+
+                <!-- Restaurant Images -->
+                <div class="gallery-item" data-category="restaurants">
+                    <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="مطعم فاخر">
+                    <div class="gallery-overlay">
+                        <h4>مطعم فاخر بإطلالة بحرية</h4>
+                        <p>تجربة طعام استثنائية مع أشهى المأكولات</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="restaurants">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="مطعم تركي">
+                    <div class="gallery-overlay">
+                        <h4>مطعم المأكولات التركية</h4>
+                        <p>أطباق تركية أصيلة بنكهات تقليدية</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="restaurants">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="مقهى أنيق">
+                    <div class="gallery-overlay">
+                        <h4>مقهى أنيق مع إطلالة</h4>
+                        <p>تمتعوا بقهوة مميزة في أجواء راقية</p>
+                    </div>
+                </div>
+
+                <!-- Facilities Images -->
+                <div class="gallery-item" data-category="facilities">
+                    <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="حمام سباحة">
+                    <div class="gallery-overlay">
+                        <h4>حمام سباحة على السطح</h4>
+                        <p>استمتع بالسباحة مع إطلالة بانورامية</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="facilities">
+                    <img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="سبا">
+                    <div class="gallery-overlay">
+                        <h4>مركز السبا والاسترخاء</h4>
+                        <p>علاجات مميزة للاسترخاء والتجديد</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="facilities">
+                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="صالة رياضية">
+                    <div class="gallery-overlay">
+                        <h4>صالة رياضية حديثة</h4>
+                        <p>أجهزة متطورة ومدربين محترفين</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="facilities">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="لوبي فاخر">
+                    <div class="gallery-overlay">
+                        <h4>لوبي فاخر وأنيق</h4>
+                        <p>استقبال مميز بتصميم عصري راقي</p>
+                    </div>
+                </div>
+
+                <!-- Views Images -->
+                <div class="gallery-item" data-category="views">
+                    <img src="https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="إطلالة البوسفور">
+                    <div class="gallery-overlay">
+                        <h4>إطلالة خلابة على البوسفور</h4>
+                        <p>منظر ساحر يأسر القلوب من النوافذ</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="views">
+                    <img src="https://images.unsplash.com/photo-1505142468610-359e7d316be0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="إطلالة ليلية">
+                    <div class="gallery-overlay">
+                        <h4>إطلالة ليلية ساحرة</h4>
+                        <p>جمال إسطنبول الليلي من أعلى الفندق</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="views">
+                    <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="شروق الشمس">
+                    <div class="gallery-overlay">
+                        <h4>شروق الشمس الذهبي</h4>
+                        <p>استيقظوا على منظر شروق رائع</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gallery-stats">
+                <div class="stat-box">
+                    <i class="fas fa-camera"></i>
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">صورة مميزة</span>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-eye"></i>
+                    <span class="stat-number">10k+</span>
+                    <span class="stat-label">مشاهدة يومياً</span>
+                </div>
+                <div class="stat-box">
+                    <i class="fas fa-heart"></i>
+                    <span class="stat-number">95%</span>
+                    <span class="stat-label">تقييم إيجابي</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reservation Section -->
+    <section id="reservation" class="section">
+        <h2 class="section-title">احجز إقامتك الآن</h2>
+        <form id="reservationForm" class="reservation-form">
+            <div class="form-group">
+                <label for="name">الاسم الكامل:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">البريد الإلكتروني:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">رقم الهاتف:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="checkin">تاريخ الوصول:</label>
+                    <input type="date" id="checkin" name="checkin" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="checkout">تاريخ المغادرة:</label>
+                    <input type="date" id="checkout" name="checkout" required>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="guests">عدد الضيوف:</label>
+                    <select id="guests" name="guests" required>
+                        <option value="">اختر عدد الضيوف</option>
+                        <option value="1">1 ضيف</option>
+                        <option value="2">2 ضيف</option>
+                        <option value="3">3 ضيوف</option>
+                        <option value="4">4 ضيوف</option>
+                        <option value="5+">5+ ضيوف</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="hotel">الفندق المفضل:</label>
+                    <select id="hotel" name="hotel" required>
+                        <option value="">اختر الفندق</option>
+                        <option value="four-seasons">فور سيزونز البوسفور</option>
+                        <option value="ritz-carlton">ريتز كارلتون إسطنبول</option>
+                        <option value="shangri-la">شانغريلا البوسفور</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label for="requests">طلبات خاصة:</label>
+                <textarea id="requests" name="requests" rows="4" placeholder="أي طلبات أو ملاحظات خاصة..."></textarea>
+            </div>
+            
+            <button type="submit" class="btn submit-btn">
+                <span class="btn-text">إرسال طلب الحجز</span>
+                <div class="loading" style="display: none;"></div>
+            </button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="footer">
+        <div class="section">
+            <h3>روقا للحجوزات الفندقية</h3>
+            <p>وجهتك المثالية لحجز أفخم الفنادق في إسطنبول</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <p>&copy; 2024 روقا للحجوزات الفندقية. جميع الحقوق محفوظة.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

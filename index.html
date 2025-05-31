@@ -736,86 +736,446 @@
 
     <!-- Reservation Section -->
     <section id="reservation" class="section">
-        <h2 class="section-title">احجز إقامتك الآن</h2>
-        <form id="reservationForm" class="reservation-form">
-            <div class="form-group">
-                <label for="name">الاسم الكامل:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
+        <div class="reservation-container">
+            <h2 class="section-title">احجز إقامتك الآن</h2>
+            <p class="section-subtitle">استمتع بتجربة حجز سهلة وسريعة في أفخم فنادق إسطنبول</p>
             
-            <div class="form-group">
-                <label for="email">البريد الإلكتروني:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            
-            <div class="form-group">
-                <label for="phone">رقم الهاتف:</label>
-                <input type="tel" id="phone" name="phone" required>
-            </div>
-            
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="checkin">تاريخ الوصول:</label>
-                    <input type="date" id="checkin" name="checkin" required>
+            <div class="reservation-content">
+                <div class="form-side">
+                    <form id="reservationForm" class="reservation-form">
+                        <div class="form-header">
+                            <i class="fas fa-calendar-check"></i>
+                            <h3>تفاصيل الحجز</h3>
+                        </div>
+
+                        <div class="form-step active" data-step="1">
+                            <h4 class="step-title">المعلومات الشخصية</h4>
+                            
+                            <div class="form-group">
+                                <label for="name">
+                                    <i class="fas fa-user"></i>
+                                    الاسم الكامل:
+                                </label>
+                                <input type="text" id="name" name="name" required placeholder="أدخل اسمك الكامل">
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">
+                                        <i class="fas fa-envelope"></i>
+                                        البريد الإلكتروني:
+                                    </label>
+                                    <input type="email" id="email" name="email" required placeholder="example@email.com">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="phone">
+                                        <i class="fas fa-phone"></i>
+                                        رقم الهاتف:
+                                    </label>
+                                    <input type="tel" id="phone" name="phone" required placeholder="+90 555 123 4567">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-step" data-step="2">
+                            <h4 class="step-title">تفاصيل الإقامة</h4>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="checkin">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        تاريخ الوصول:
+                                    </label>
+                                    <input type="date" id="checkin" name="checkin" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="checkout">
+                                        <i class="fas fa-calendar-alt"></i>
+                                        تاريخ المغادرة:
+                                    </label>
+                                    <input type="date" id="checkout" name="checkout" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="guests">
+                                        <i class="fas fa-users"></i>
+                                        عدد الضيوف:
+                                    </label>
+                                    <select id="guests" name="guests" required>
+                                        <option value="">اختر عدد الضيوف</option>
+                                        <option value="1">1 ضيف</option>
+                                        <option value="2">2 ضيف</option>
+                                        <option value="3">3 ضيوف</option>
+                                        <option value="4">4 ضيوف</option>
+                                        <option value="5">5 ضيوف</option>
+                                        <option value="6">6 ضيوف</option>
+                                        <option value="7+">7+ ضيوف</option>
+                                    </select>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="rooms">
+                                        <i class="fas fa-bed"></i>
+                                        عدد الغرف:
+                                    </label>
+                                    <select id="rooms" name="rooms" required>
+                                        <option value="">اختر عدد الغرف</option>
+                                        <option value="1">غرفة واحدة</option>
+                                        <option value="2">غرفتان</option>
+                                        <option value="3">3 غرف</option>
+                                        <option value="4">4 غرف</option>
+                                        <option value="5+">5+ غرف</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="hotel">
+                                    <i class="fas fa-building"></i>
+                                    الفندق المفضل:
+                                </label>
+                                <select id="hotel" name="hotel" required>
+                                    <option value="">اختر الفندق</option>
+                                    <option value="four-seasons" data-price="450">فور سيزونز البوسفور - $450/ليلة</option>
+                                    <option value="ritz-carlton" data-price="380">ريتز كارلتون إسطنبول - $380/ليلة</option>
+                                    <option value="shangri-la" data-price="420">شانغريلا البوسفور - $420/ليلة</option>
+                                    <option value="swissotel" data-price="320">سويس أوتيل البوسفور - $320/ليلة</option>
+                                    <option value="hyatt-regency" data-price="280">حياة ريجنسي إسطنبول - $280/ليلة</option>
+                                    <option value="conrad" data-price="390">كونراد إسطنبول - $390/ليلة</option>
+                                    <option value="radisson-blu" data-price="240">راديسون بلو إسطنبول - $240/ليلة</option>
+                                    <option value="intercontinental" data-price="350">إنتركونتيننتال إسطنبول - $350/ليلة</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-step" data-step="3">
+                            <h4 class="step-title">طلبات إضافية</h4>
+                            
+                            <div class="form-group">
+                                <label for="room-type">
+                                    <i class="fas fa-home"></i>
+                                    نوع الغرفة المفضل:
+                                </label>
+                                <select id="room-type" name="room-type">
+                                    <option value="">اختر نوع الغرفة</option>
+                                    <option value="standard">غرفة قياسية</option>
+                                    <option value="deluxe">غرفة ديلوكس</option>
+                                    <option value="suite">جناح</option>
+                                    <option value="executive">جناح تنفيذي</option>
+                                    <option value="presidential">الجناح الرئاسي</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="view-preference">
+                                    <i class="fas fa-eye"></i>
+                                    الإطلالة المفضلة:
+                                </label>
+                                <select id="view-preference" name="view-preference">
+                                    <option value="">اختر الإطلالة</option>
+                                    <option value="sea">إطلالة بحرية</option>
+                                    <option value="city">إطلالة على المدينة</option>
+                                    <option value="garden">إطلالة على الحديقة</option>
+                                    <option value="bosphorus">إطلالة على البوسفور</option>
+                                </select>
+                            </div>
+
+                            <div class="special-requests">
+                                <h5>خدمات إضافية:</h5>
+                                <div class="checkbox-group">
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="services[]" value="airport-transfer">
+                                        <span class="checkmark"></span>
+                                        نقل من المطار
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="services[]" value="spa">
+                                        <span class="checkmark"></span>
+                                        حجز السبا
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="services[]" value="restaurant">
+                                        <span class="checkmark"></span>
+                                        حجز المطعم
+                                    </label>
+                                    <label class="checkbox-item">
+                                        <input type="checkbox" name="services[]" value="tour-guide">
+                                        <span class="checkmark"></span>
+                                        مرشد سياحي
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="requests">
+                                    <i class="fas fa-comment"></i>
+                                    طلبات خاصة:
+                                </label>
+                                <textarea id="requests" name="requests" rows="4" placeholder="أي طلبات أو ملاحظات خاصة..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn-nav btn-prev" onclick="previousStep()" style="display: none;">
+                                <i class="fas fa-chevron-right"></i>
+                                السابق
+                            </button>
+                            <button type="button" class="btn-nav btn-next" onclick="nextStep()">
+                                التالي
+                                <i class="fas fa-chevron-left"></i>
+                            </button>
+                            <button type="submit" class="btn submit-btn" style="display: none;">
+                                <span class="btn-text">
+                                    <i class="fas fa-paper-plane"></i>
+                                    إرسال طلب الحجز
+                                </span>
+                                <div class="loading-spinner" style="display: none;">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                </div>
+                            </button>
+                        </div>
+
+                        <div class="form-progress">
+                            <div class="progress-step active" data-step="1">
+                                <div class="step-number">1</div>
+                                <span>المعلومات الشخصية</span>
+                            </div>
+                            <div class="progress-step" data-step="2">
+                                <div class="step-number">2</div>
+                                <span>تفاصيل الإقامة</span>
+                            </div>
+                            <div class="progress-step" data-step="3">
+                                <div class="step-number">3</div>
+                                <span>الطلبات الإضافية</span>
+                            </div>
+                        </div>
+                    </form>
                 </div>
-                
-                <div class="form-group">
-                    <label for="checkout">تاريخ المغادرة:</label>
-                    <input type="date" id="checkout" name="checkout" required>
+
+                <div class="summary-side">
+                    <div class="booking-summary" id="bookingSummary">
+                        <h3>
+                            <i class="fas fa-receipt"></i>
+                            ملخص الحجز
+                        </h3>
+                        <div class="summary-content">
+                            <div class="summary-item">
+                                <span class="label">الفندق:</span>
+                                <span class="value" id="summaryHotel">لم يتم الاختيار</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">التواريخ:</span>
+                                <span class="value" id="summaryDates">لم يتم الاختيار</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">عدد الليالي:</span>
+                                <span class="value" id="summaryNights">0</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">الضيوف:</span>
+                                <span class="value" id="summaryGuests">لم يتم الاختيار</span>
+                            </div>
+                            <div class="summary-item">
+                                <span class="label">الغرف:</span>
+                                <span class="value" id="summaryRooms">لم يتم الاختيار</span>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-item total">
+                                <span class="label">إجمالي التكلفة:</span>
+                                <span class="value" id="summaryTotal">$0</span>
+                            </div>
+                        </div>
+                        
+                        <div class="price-note">
+                            <i class="fas fa-info-circle"></i>
+                            الأسعار تشمل الضرائب والرسوم
+                        </div>
+                    </div>
+
+                    <div class="contact-info">
+                        <h4>تحتاج مساعدة؟</h4>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+90 534 399 20 80</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>booking@roqa-hotels.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>متاح 24/7</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="guests">عدد الضيوف:</label>
-                    <select id="guests" name="guests" required>
-                        <option value="">اختر عدد الضيوف</option>
-                        <option value="1">1 ضيف</option>
-                        <option value="2">2 ضيف</option>
-                        <option value="3">3 ضيوف</option>
-                        <option value="4">4 ضيوف</option>
-                        <option value="5+">5+ ضيوف</option>
-                    </select>
+        </div>
+
+        <!-- Booking Confirmation Modal -->
+        <div id="confirmationModal" class="modal" style="display: none;">
+            <div class="modal-content">
+                <div class="confirmation-header">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>تم إرسال طلب الحجز بنجاح!</h2>
                 </div>
-                
-                <div class="form-group">
-                    <label for="hotel">الفندق المفضل:</label>
-                    <select id="hotel" name="hotel" required>
-                        <option value="">اختر الفندق</option>
-                        <option value="four-seasons">فور سيزونز البوسفور</option>
-                        <option value="ritz-carlton">ريتز كارلتون إسطنبول</option>
-                        <option value="shangri-la">شانغريلا البوسفور</option>
-                    </select>
+                <div class="confirmation-body" id="confirmationDetails">
+                    <!-- Booking details will be inserted here -->
+                </div>
+                <div class="confirmation-actions">
+                    <button class="btn btn-primary" onclick="downloadBooking()">
+                        <i class="fas fa-download"></i>
+                        تحميل تفاصيل الحجز
+                    </button>
+                    <button class="btn btn-secondary" onclick="closeModal()">
+                        <i class="fas fa-times"></i>
+                        إغلاق
+                    </button>
                 </div>
             </div>
-            
-            <div class="form-group">
-                <label for="requests">طلبات خاصة:</label>
-                <textarea id="requests" name="requests" rows="4" placeholder="أي طلبات أو ملاحظات خاصة..."></textarea>
-            </div>
-            
-            <button type="submit" class="btn submit-btn">
-                <span class="btn-text">إرسال طلب الحجز</span>
-                <div class="loading" style="display: none;"></div>
-            </button>
-        </form>
+        </div>
     </section>
 
     <!-- Footer -->
     <footer id="contact" class="footer">
-        <div class="section">
-            <h3>روقا للحجوزات الفندقية</h3>
-            <p>وجهتك المثالية لحجز أفخم الفنادق في إسطنبول</p>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+        <div class="footer-container">
+            <!-- Footer Top -->
+            <div class="footer-top">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <i class="fas fa-hotel"></i>
+                        <h3>روقا للحجوزات الفندقية</h3>
+                    </div>
+                    <p class="footer-description">
+                        وجهتك المثالية لحجز أفخم الفنادق في إسطنبول. نقدم لكم تجربة حجز سهلة وآمنة مع أفضل الأسعار والعروض الحصرية.
+                    </p>
+                    <div class="footer-stats">
+                        <div class="stat">
+                            <span class="number">8</span>
+                            <span class="label">فنادق فاخرة</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">50k+</span>
+                            <span class="label">ضيف سعيد</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">99%</span>
+                            <span class="label">رضا العملاء</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home"><i class="fas fa-home"></i> الرئيسية</a></li>
+                        <li><a href="#hotels"><i class="fas fa-building"></i> الفنادق</a></li>
+                        <li><a href="#services"><i class="fas fa-concierge-bell"></i> الخدمات</a></li>
+                        <li><a href="#gallery"><i class="fas fa-images"></i> معرض الصور</a></li>
+                        <li><a href="#reservation"><i class="fas fa-calendar-check"></i> الحجز</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>معلومات الاتصال</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>العنوان:</strong>
+                                <p>إسطنبول، تركيا<br>منطقة بشيكتاش الراقية</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <strong>الهاتف:</strong>
+                                <p>+90 534 399 20 80</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>البريد الإلكتروني:</strong>
+                                <p>booking@roqa-hotels.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>ساعات العمل:</strong>
+                                <p>متاح 24/7</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>تابعونا</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link facebook">
+                            <i class="fab fa-facebook-f"></i>
+                            <span>Facebook</span>
+                        </a>
+                        <a href="#" class="social-link twitter">
+                            <i class="fab fa-twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#" class="social-link instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="#" class="social-link linkedin">
+                            <i class="fab fa-linkedin-in"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="#" class="social-link whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>WhatsApp</span>
+                        </a>
+                    </div>
+
+                    <div class="newsletter">
+                        <h5>اشترك في النشرة الإخبارية</h5>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="بريدك الإلكتروني" required>
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <p>&copy; 2024 روقا للحجوزات الفندقية. جميع الحقوق محفوظة.</p>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <div class="copyright">
+                        <p>&copy; 2024 روقا للحجوزات الفندقية. جميع الحقوق محفوظة.</p>
+                    </div>
+                    <div class="footer-bottom-links">
+                        <a href="#">سياسة الخصوصية</a>
+                        <a href="#">شروط الاستخدام</a>
+                        <a href="#">سياسة الإلغاء</a>
+                        <a href="#">الأسئلة الشائعة</a>
+                    </div>
+                    <div class="payment-methods">
+                        <span>طرق الدفع المقبولة:</span>
+                        <div class="payment-icons">
+                            <i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-paypal"></i>
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="/assets/js/script.js"></script>
 </body>
 </html>
